@@ -1,0 +1,94 @@
+============================================================
+DRINKING WATER QUALITY PREDICTION USING MACHINE LEARNING
+============================================================
+
+Step 1 : Loading Dataset
+
+First 5 Rows
+         ph    Hardness        Solids  Chloramines     Sulfate  Conductivity  \
+0       NaN  204.890455  20791.318981     7.300212  368.516441    564.308654   
+1  3.716080  129.422921  18630.057858     6.635246         NaN    592.885359   
+2  8.099124  224.236259  19909.541732     9.275884         NaN    418.606213   
+3  8.316766  214.373394  22018.417441     8.059332  356.886136    363.266516   
+4  9.092223  181.101509  17978.986339     6.546600  310.135738    398.410813   
+
+   Organic_carbon  Trihalomethanes  Turbidity  Potability  
+0       10.379783        86.990970   2.963135           0  
+1       15.180013        56.329076   4.500656           0  
+2       16.868637        66.420093   3.055934           0  
+3       18.436524       100.341674   4.628771           0  
+4       11.558279        31.997993   4.075075           0  
+
+Dataset Information
+<class 'pandas.DataFrame'>
+RangeIndex: 3276 entries, 0 to 3275
+Data columns (total 10 columns):
+ #   Column           Non-Null Count  Dtype  
+---  ------           --------------  -----  
+ 0   ph               2785 non-null   float64
+ 1   Hardness         3276 non-null   float64
+ 2   Solids           3276 non-null   float64
+ 3   Chloramines      3276 non-null   float64
+ 4   Sulfate          2495 non-null   float64
+ 5   Conductivity     3276 non-null   float64
+ 6   Organic_carbon   3276 non-null   float64
+ 7   Trihalomethanes  3114 non-null   float64
+ 8   Turbidity        3276 non-null   float64
+ 9   Potability       3276 non-null   int64  
+dtypes: float64(9), int64(1)
+memory usage: 256.1 KB
+
+Dataset Shape
+(3276, 10)
+
+Column Names
+Index(['ph', 'Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity',
+       'Organic_carbon', 'Trihalomethanes', 'Turbidity', 'Potability'],
+      dtype='str')
+
+Step 2 : Missing Values Before Preprocessing
+ph                 491
+Hardness             0
+Solids               0
+Chloramines          0
+Sulfate            781
+Conductivity         0
+Organic_carbon       0
+Trihalomethanes    162
+Turbidity            0
+Potability           0
+dtype: int64
+
+Missing Values Graph Saved
+
+Missing Values After Preprocessing
+ph                 0
+Hardness           0
+Solids             0
+Chloramines        0
+Sulfate            0
+Conductivity       0
+Organic_carbon     0
+Trihalomethanes    0
+Turbidity          0
+Potability         0
+dtype: int64
+
+Duplicate Rows : 0
+
+Dataset Shape After Removing Duplicates
+(3276, 10)
+
+Cleaned Dataset Saved Successfully
+
+Creating Class Distribution Graph
+Class Distribution Graph Saved
+
+Creating Correlation Heatmap
+Correlation Heatmap Saved
+
+Splitting Features and Target
+Features Shape : (3276, 9)
+Target Shape   : (3276,)
+
+Data Preprocessing Completed Successfully
